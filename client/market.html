@@ -8,6 +8,35 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js"></script>
 </head>
 <body>
-    
+    <div class="loginchoice">
+        <button class="btn btn-primary" id="connectButton">Click it</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const connectButton = document.getElementById('connectButton');
+          
+          connectButton.addEventListener('click', function() {
+            // Check if Web3 has already been injected by the browser (MetaMask)
+            if (typeof web3 !== 'undefined') {
+              // Use the injected provider
+              web3 = new Web3(web3.currentProvider);
+              console.log('Using MetaMask provider');
+            } else {
+              // Handle the case where the user doesn't have MetaMask installed or not using an Ethereum-capable browser
+              console.log('Please install MetaMask or use an Ethereum-capable browser.');
+            }
+            
+            // Now you can use the web3 object to interact with Metamask and Ethereum network
+            // For example, you can get the current selected address:
+            web3.eth.getAccounts().then(function(accounts) {
+              const selectedAddress = accounts[0];
+              console.log('Selected address:', selectedAddress);
+              
+              // You can perform additional operations here once connected
+              // ...
+            });
+          });
+        });
+    </script>
 </body>
 </html>
