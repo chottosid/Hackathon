@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "certificateGenerated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "certificates",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "artid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "creatorid",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_artid",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_creatorid",
+						"type": "uint256"
+					}
+				],
+				"name": "generateCertificate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getData",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Certification.sol": "Certification"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Certification.sol": {
+			"keccak256": "0xc576e7c87b9af0d04f276591af164515e33bd1e3dabfdb2396cf0c4a690dfa6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e4e125fbb1fcd634c3b0ca5959ead5ae54a9d0f58253c1334fb158554bbf72a2",
+				"dweb:/ipfs/QmT1X5tCoXGKRxGL7snHNjxXBajnP2u1YmdtRRAARsbZVR"
+			]
+		}
+	},
+	"version": 1
+}
