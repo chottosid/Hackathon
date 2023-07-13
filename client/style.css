@@ -1,0 +1,16 @@
+.title {
+    margin: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.loginchoice {
+    margin-top: 100px;
+    padding: 40 px;
+    text-align: center;
+    font-size: larger;
+}
+
+.button {
+    margin: 20px;
+}
