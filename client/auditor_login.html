@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditor Login Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        Auditor Login Portal
+    </h1>
+    <div class="loginchoice">
+        <form action="auditor_dashboard.html" method="post">
+            <label for="auditor_name">Username</label>
+            <input type="text" name="auditor_name" id="auditor_name">
+            <br>
+            <label for="auditor_password">Password</label>
+            <input type="password" name="auditor_password" id="auditor_password">
+            <br>
+            <input type="submit" value="Submit" onclick="return auditorValidate()">
+        </form>
+    </div>
+
+    <script>
+        const auditorValidate = () => {
+            var username = document.getElementById("auditor_name").value;
+            var pass = document.getElementById("auditor_password").value;
+
+            if(username == "")
+            {
+                alert("Username cannot be empty!");
+                return false;
+            }
+
+            if(pass == "")
+            {
+                alert("Password cannot be empty!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

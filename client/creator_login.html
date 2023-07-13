@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Login Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.3/web3.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        Creator Login Portal
+    </h1>
+    <div class="loginchoice">
+        <form action="creator_dashboard.html" method="post">
+            <label for="creator_name">Username</label>
+            <input type="text" name="creator_name" id="creator_name">
+            <br>
+            <label for="creator_password">Password</label>
+            <input type="password" name="creator_password" id="creator_password">
+            <br>
+            <input type="submit" value="Submit" onclick="return creatorValidate()">
+        </form>
+    </div>
+
+    <script>
+        const creatorValidate = () => {
+            var username = document.getElementById("creator_name").value;
+            var pass = document.getElementById("creator_password").value;
+
+            if(username == "")
+            {
+                alert("Username cannot be empty!");
+                return false;
+            }
+
+            if(pass == "")
+            {
+                alert("Password cannot be empty!");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
