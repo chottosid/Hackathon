@@ -40,6 +40,9 @@ contract ArtManager {
 
         emit ArtworkRegistered(artworkCount);
     }
+    function getName(uint id) public view returns(string memory){
+        return artworks[id].image;
+    }
     function registerBuyer(uint _id) external {
         BAMTaka bt=new BAMTaka();
         Buyer memory temp=Buyer(msg.sender,_id,bt);
