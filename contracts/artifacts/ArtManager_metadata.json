@@ -133,9 +133,59 @@
 						"internalType": "uint256",
 						"name": "artID",
 						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "bool",
+								"name": "is_booked",
+								"type": "bool"
+							},
+							{
+								"internalType": "address",
+								"name": "addr",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "index",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "paid_so_far",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ArtManager.Pot_Buyer",
+						"name": "pot_buyer",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_artworkId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newowner",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pay_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "bookArt",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -176,6 +226,24 @@
 					}
 				],
 				"name": "deliverArtwork",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_artworkId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pay_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "installment_for_booked_item",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -359,11 +427,11 @@
 			]
 		},
 		"contracts/ArtManager.sol": {
-			"keccak256": "0x09aceae9b7e873b425586364873cd4b0979dbda9ac4b3ebbbbe0a4d9ea080625",
+			"keccak256": "0x2bfa529a385608180b6ffdb304a20481b6a5181a4d0256f702504531228ecb9a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f5e46ab35b538feb3ef07887ed6463d2d7028e2af9fe60a8da55f48b763374e6",
-				"dweb:/ipfs/QmUVnuuEtQwxedwhT7bJkVMywhdV5xhVUXx9M64EakpvGm"
+				"bzz-raw://232f5a47bd96f8a8f3dfd59ca5e4bdda252e0f159f6d26776422946297ba21d9",
+				"dweb:/ipfs/QmTz7J2taiYSh9WhdXiLevqAdazDqBwwUv6qE2kj1UejrR"
 			]
 		},
 		"contracts/BAMTaka.sol": {
